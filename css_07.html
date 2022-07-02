@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Challenge 07</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .icons {
+            background: linear-gradient(rgb(152, 250, 41), rgb(40, 150, 252));
+            width: 300px;
+            height: 300px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        ico {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        i {
+            opacity: 0;
+        }
+
+        .btn-upload:hover i {
+            opacity: 1;
+            animation-name: move-up;
+            animation-duration: 400ms;
+            /* transform: translateY(-20px); */
+        }
+
+        .btn-download:hover i {
+            opacity: 1;
+            animation-name: move-down;
+            animation-duration: 400ms;
+        }
+
+        .btn-list:hover i {
+            opacity: 1;
+            animation-name: appear;
+            animation-duration: 400ms;
+        }
+
+        .btn-halo:hover i {
+            opacity: 1;
+            animation-name: appear_2;
+            animation-duration: 400ms;
+        }
+
+        @keyframes move-up {
+            0% {
+                transform: translateY(0px);
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-16px);
+            }
+        }
+
+        @keyframes move-down {
+            0% {
+                transform: translateY(-16px);
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes appear {
+            0% {
+                transform: translateX(-16px);
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes appear_2 {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="icons">
+        <p class="">Hover me</p>
+
+        <ico class="btn-upload">
+            <n><i class="fa fa-arrow-up"></i></n>
+        </ico>
+        <ico class="btn-download">
+            <n><i class="fa fa-arrow-down"></i></n>
+        </ico>
+        <ico class="btn-list">
+            <n><i class="fa fa-list"></i></n>
+        </ico>
+        <ico class="btn-halo">
+            <n><i class="fa fa-spinner"></i></n>
+        </ico>
+
+    </div>
+
+</body>
+
+</html>
